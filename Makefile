@@ -13,14 +13,14 @@ CLIB = cc65.lib
 HEXDUMP = hexdump
 HEXDUMP_ARGS = -v -e '1/1 "%02x " "\n"'
 
-# Compilation of assembler files
-%.o: %.s
-	$(CA65) $(CAFLAGS) -o $@ -l $(@:.o=.lst) $<
-
 # Compilation of C files
 %.o: %.c
 	$(CC65) $(CCFLAGS) -o $(@:.o=.s) $<
 	$(CA65) $(CAFLAGS) -o $@ -l $(@:.o=.lst) $(<:.c=.s)
+
+# Compilation of assembler files
+%.o: %.s
+	$(CA65) $(CAFLAGS) -o $@ -l $(@:.o=.lst) $<
 
 # Default target
 all: 	$(ASM_SOURCES:.s=.o) $(C_SOURCES:.c=.o)
