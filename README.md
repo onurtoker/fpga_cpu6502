@@ -1,7 +1,6 @@
 # fpga_cpu6502
-6502 on FPGA
+6502 on FPGA / Memory Map
 
-Memory Map
 RAM
 
 0000-00FF : zeropage / reserved 
