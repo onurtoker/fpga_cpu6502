@@ -2,10 +2,13 @@
 
 int main() {
 
-  char* p;
+  int k;
+  int sum = 0;
 
-  p = (char *) 0x1000;
-  *p = (char) '0';
+  for (k = 0; k < 10; k++)
+	sum += k; 
+ 
+  *((char*) 0x7000) = (char) sum;
 
   return 0;
 }
