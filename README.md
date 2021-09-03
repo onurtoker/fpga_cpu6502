@@ -7,7 +7,7 @@ RAM
 
 0200-6FFF : RAM
 
-7000-7FFFF : Other I/O, etc.)
+7000-7FFFF : Other (I/O, etc.)
 
 ROM (Program memory)
 
