@@ -5,9 +5,9 @@ RAM
 
 0000-00FF : zeropage / reserved 
 
-0100-01FF : not used (I/O?)
+0200-6FFF : RAM
 
-0200-7FFF : general use
+7000-7FFFF : Other I/O, etc.)
 
 ROM (Program memory)
 
